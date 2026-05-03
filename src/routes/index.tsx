@@ -78,7 +78,7 @@ function Index() {
           <div className="relative">
             <img
               src={heroImg}
-              alt="Cream cable knit sweater folded on linen"
+              alt="My old blue Puma hoodie laid out on the bed"
               width={1280}
               height={1024}
               className="w-full rounded-3xl"
