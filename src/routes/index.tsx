@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-headphones.jpg";
-import comfortImg from "@/assets/feature-comfort.jpg";
-import soundImg from "@/assets/feature-sound.jpg";
-import batteryImg from "@/assets/feature-battery.jpg";
+import heroImg from "@/assets/hero-sweater.jpg";
+import softImg from "@/assets/sweater-soft.jpg";
+import warmImg from "@/assets/sweater-warm.jpg";
+import timelessImg from "@/assets/sweater-timeless.jpg";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Aura Pro — Wireless Headphones Built for Your Ears" },
+      { title: "My Old Sweater — The Comfort You've Been Missing" },
       {
         name: "description",
         content:
-          "Discover Aura Pro: studio-grade sound, all-day comfort, and 40-hour battery life. Premium wireless headphones for music lovers.",
+          "A heirloom-quality knit sweater that feels like a hug. Soft merino wool, timeless cut, and built to outlast trends.",
       },
     ],
   }),
@@ -21,22 +21,22 @@ export const Route = createFileRoute("/")({
 
 const benefits = [
   {
-    title: "Studio-Grade Sound",
+    title: "Impossibly Soft",
     description:
-      "Tuned by Grammy-winning engineers, Aura Pro delivers crisp highs, warm mids, and deep bass that bring every note to life.",
-    image: soundImg,
+      "Spun from fine merino wool, every stitch feels gentle on your skin — no itch, no fuss, just comfort.",
+    image: softImg,
   },
   {
-    title: "All-Day Comfort",
+    title: "Cozy In Every Season",
     description:
-      "Memory foam cushions wrapped in soft protein leather feel weightless — even after eight hours of listening.",
-    image: comfortImg,
+      "Breathable yet warm. Throw it on with coffee in the morning or layered under a coat at night.",
+    image: warmImg,
   },
   {
-    title: "40-Hour Battery",
+    title: "Timeless, Not Trendy",
     description:
-      "Charge once, listen all week. A quick 10-minute top-up gives you another 5 hours of uninterrupted music.",
-    image: batteryImg,
+      "A classic ribbed silhouette that ages beautifully — the kind of piece you'll keep reaching for in ten years.",
+    image: timelessImg,
   },
 ];
 
@@ -50,33 +50,35 @@ function Index() {
       >
         <div className="container mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center md:py-28">
           <div className="space-y-6">
-            <span className="inline-block rounded-full border border-foreground/15 bg-background/40 px-4 py-1 text-xs font-medium tracking-wide uppercase backdrop-blur">
-              New · Aura Pro
+            <span className="inline-block rounded-full border border-foreground/15 bg-background/50 px-4 py-1 text-xs font-medium tracking-[0.2em] uppercase backdrop-blur">
+              The Heirloom Knit
             </span>
-            <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-6xl">
-              Sound that moves you. Comfort that stays.
+            <h1 className="font-serif text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
+              My Old Sweater.
+              <br />
+              <span className="italic text-foreground/70">Brand new.</span>
             </h1>
             <p className="text-lg text-foreground/75 md:text-xl">
-              Premium wireless headphones designed for music lovers who refuse
-              to compromise — on sound, comfort, or style.
+              The kind of sweater that feels like it's already yours — soft,
+              warm, and made to last a lifetime of Sundays.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Button size="lg" className="rounded-full px-8">
-                Shop Now — $299
+                Shop the Sweater — $89
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="rounded-full bg-background/40 px-8 backdrop-blur"
               >
-                Learn More
+                Our Story
               </Button>
             </div>
           </div>
           <div className="relative">
             <img
               src={heroImg}
-              alt="Aura Pro wireless headphones floating on pastel background"
+              alt="Cream cable knit sweater folded on linen"
               width={1280}
               height={1024}
               className="w-full rounded-3xl"
@@ -89,11 +91,11 @@ function Index() {
       {/* Benefits */}
       <section className="container mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
-            Engineered for the way you listen
+          <h2 className="font-serif text-4xl font-semibold tracking-tight md:text-5xl">
+            Why you'll never take it off
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Three things we obsessed over so you can simply press play.
+            Three things we obsessed over so it feels like a favorite from day one.
           </p>
         </div>
 
@@ -115,7 +117,7 @@ function Index() {
                 />
               </div>
               <div className="space-y-2 p-6">
-                <h3 className="text-xl font-semibold">{b.title}</h3>
+                <h3 className="font-serif text-xl font-semibold">{b.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   {b.description}
                 </p>
@@ -134,24 +136,24 @@ function Index() {
             boxShadow: "var(--shadow-glow)",
           }}
         >
-          <h2 className="text-3xl font-bold md:text-4xl">
-            Ready to hear the difference?
+          <h2 className="font-serif text-3xl font-semibold md:text-4xl">
+            Wrap up in something timeless.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-base opacity-90">
-            Free shipping, 30-day returns, and a 2-year warranty on every pair.
+            Free shipping, easy returns, and a lifetime mending guarantee on every knit.
           </p>
           <Button
             size="lg"
             variant="secondary"
             className="mt-8 rounded-full px-8"
           >
-            Order Aura Pro
+            Make It Yours
           </Button>
         </div>
       </section>
 
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
-        © 2026 Aura Audio · Class Assignment Demo
+        © 2026 My Old Sweater · Class Assignment Demo
       </footer>
     </main>
   );
