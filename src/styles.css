@@ -1,4 +1,4 @@
-@import "tailwindcss" source(none);
+@import "tailwindcss";
 @source "../src";
 @import "tw-animate-css";
 
@@ -63,10 +63,10 @@
 
 :root {
   --radius: 0.875rem;
-  --background: oklch(0.97 0.012 80);
+  --background:		#F2F4F7;
   --foreground: oklch(0.25 0.03 50);
-  --gradient-hero: linear-gradient(135deg, oklch(0.94 0.03 75) 0%, oklch(0.88 0.05 55) 100%);
-  --gradient-accent: linear-gradient(135deg, oklch(0.45 0.06 50), oklch(0.55 0.09 40));
+  --gradient-hero:#96b9d1;
+  --gradient-accent: 	#96b9d1;
   --shadow-soft: 0 10px 40px -10px oklch(0.35 0.05 50 / 0.18);
   --shadow-glow: 0 20px 60px -15px oklch(0.45 0.08 45 / 0.3);
   --card: oklch(1 0 0);
@@ -74,7 +74,7 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
   --primary: oklch(0.4 0.06 45);
-  --primary-foreground: oklch(0.98 0.01 80);
+  --primary-background: #007BFF;
   --secondary: oklch(0.93 0.02 75);
   --secondary-foreground: oklch(0.3 0.04 50);
   --muted: oklch(0.968 0.007 247.896);

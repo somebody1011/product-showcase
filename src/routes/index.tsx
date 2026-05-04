@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-sweater.jpg";
-import softImg from "@/assets/sweater-soft.jpg";
-import warmImg from "@/assets/sweater-warm.jpg";
-import timelessImg from "@/assets/sweater-timeless.jpg";
+import heroImg from "@/assets/hero-sweater.png";
+import softImg from "@/assets/sweater-left.png";
+import warmImg from "@/assets/sweater-back.png";
+import timelessImg from "@/assets/sweater-onperson.png";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "My Old Sweater — The Comfort You've Been Missing" },
+      { title: "hoodie from Puma" },
       {
         name: "description",
         content:
-          "A heirloom-quality knit sweater that feels like a hug. Soft merino wool, timeless cut, and built to outlast trends.",
+          "A heirloom-quality hoodie that feels like a hug. Soft merino wool, timeless cut, and built to outlast trends.",
       },
     ],
   }),
@@ -21,21 +21,21 @@ export const Route = createFileRoute("/")({
 
 const benefits = [
   {
-    title: "Impossibly Soft",
+    title: "Impossibly Soft & comfy",
     description:
-      "Spun from fine merino wool, every stitch feels gentle on your skin — no itch, no fuss, just comfort.",
+      "Spun from fine merino wool, every stitch feels gentle on your skin — no itch, no fuss, just comfort and you can even go under cover.",
     image: softImg,
   },
   {
-    title: "Cozy In Every Season",
+    title: "Cozy In Winter Season",
     description:
-      "Breathable yet warm. Throw it on with coffee in the morning or layered under a coat at night.",
+      "Breathable yet warm. Throw it on with during walking in the at night protected from the cold air especially in Mbeya and other cold regions.",
     image: warmImg,
   },
   {
     title: "Timeless, Not Trendy",
     description:
-      "A classic ribbed silhouette that ages beautifully — the kind of piece you'll keep reaching for in ten years.",
+      "A classic from Puma that ages beautifully — the kind of piece you'll keep reaching for in ten years.",
     image: timelessImg,
   },
 ];
@@ -51,20 +51,20 @@ function Index() {
         <div className="container mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center md:py-28">
           <div className="space-y-6">
             <span className="inline-block rounded-full border border-foreground/15 bg-background/50 px-4 py-1 text-xs font-medium tracking-[0.2em] uppercase backdrop-blur">
-              The Heirloom Knit
+              One of a Kind from Puma
             </span>
             <h1 className="font-serif text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-              My Old Sweater.
+              Puma hoodie
               <br />
-              <span className="italic text-foreground/70">Brand new.</span>
+              <span className="italic text-foreground/70">Old but Gold.</span>
             </h1>
             <p className="text-lg text-foreground/75 md:text-xl">
               The kind of sweater that feels like it's already yours — soft,
               warm, and made to last a lifetime of Sundays.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Button size="lg" className="rounded-full px-8">
-                Shop the Sweater — $89
+              <Button size="lg" className="rounded-full px-8" style={{background:"var(--primary-background)", color:"var(--primary-foreground)"}}>
+                Shop the Sweater — 10,000 Tzs
               </Button>
               <Button
                 size="lg"
@@ -145,7 +145,8 @@ function Index() {
           <Button
             size="lg"
             variant="secondary"
-            className="mt-8 rounded-full px-8"
+            className="mt-8 rounded-full px-8 "
+            style ={{background:"var(--primary-background)"}}
           >
             Make It Yours
           </Button>
@@ -153,7 +154,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
-        © 2026 My Old Sweater · Class Assignment Demo
+        © 2026 Elisha gerson · (Class Assignment)
       </footer>
     </main>
   );
