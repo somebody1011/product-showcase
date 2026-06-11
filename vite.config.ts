@@ -1,16 +1,15 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
-// or the app will break with duplicate plugins:
-//   - tanstackStart, viteReact, tailwindcss, tsConfigPaths, cloudflare (build-only),
-//     componentTagger (dev-only), VITE_* env injection, @ path alias, React/TanStack dedupe,
-//     error logger plugins, and sandbox detection (port/host/strictPort).
-// You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { nitro } from "nitro/vite"; // <--- Add this import line
 
 export default defineConfig({
 	vite: {
+		plugins: [
+			nitro({
+				preset: "vercel", // <--- This forces Nitro to output a Vercel-compatible server bundle
+			}),
+		],
 		server: {
 			proxy: {
-				// During local dev, proxy /api to the local backend server
 				'/api': {
 					target: 'http://localhost:4000',
 					changeOrigin: true,
