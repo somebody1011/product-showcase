@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-sweater.png";
 import softImg from "@/assets/sweater-left.png";
 import warmImg from "@/assets/sweater-back.png";
@@ -41,6 +41,15 @@ const benefits = [
 ];
 
 function Index() {
+  // If user is not authenticated, redirect to login page.
+  if (typeof window !== 'undefined') {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = '/login';
+      return null;
+    }
+  }
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero */}
@@ -142,14 +151,16 @@ function Index() {
           <p className="mx-auto mt-3 max-w-xl text-base opacity-90">
             Free shipping, easy returns, and a lifetime mending guarantee on every knit.
           </p>
-          <Button
-            size="lg"
-            variant="secondary"
-            className="mt-8 rounded-full px-8 "
-            style ={{background:"var(--primary-background)"}}
-          >
-            Make It Yours
-          </Button>
+          <Link to="/order" className="inline-flex">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="mt-8 rounded-full px-8 "
+              style ={{background:"var(--primary-background)"}}
+            >
+              Make It Yours
+            </Button>
+          </Link>
         </div>
       </section>
 
