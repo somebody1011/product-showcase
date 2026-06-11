@@ -22,9 +22,8 @@ function Order() {
         e.preventDefault();
         setMessage('');
         try {
-            const API = import.meta.env.VITE_API_URL ?? 'http://localhost:4000';
             const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
-            const res = await fetch(`${API}/api/orders`, {
+            const res = await fetch('/api/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

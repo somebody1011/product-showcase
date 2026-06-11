@@ -6,4 +6,17 @@
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-export default defineConfig();
+export default defineConfig({
+	vite: {
+		server: {
+			proxy: {
+				// During local dev, proxy /api to the local backend server
+				'/api': {
+					target: 'http://localhost:4000',
+					changeOrigin: true,
+					secure: false,
+				},
+			},
+		},
+	},
+});

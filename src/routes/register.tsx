@@ -24,8 +24,7 @@ function Register() {
             return;
         }
         try {
-            const API = import.meta.env.VITE_API_URL ?? 'http://localhost:4000';
-            const res = await fetch(`${API}/api/register`, {
+            const res = await fetch('/api/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ fullname, email, password }),

@@ -18,8 +18,7 @@ function Login() {
         e.preventDefault();
         setMessage('');
         try {
-            const API = import.meta.env.VITE_API_URL ?? 'http://localhost:4000';
-            const res = await fetch(`${API}/api/login`, {
+            const res = await fetch('/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password }),
