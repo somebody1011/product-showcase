@@ -72,7 +72,7 @@ function Index() {
               warm, and made to last a lifetime of Sundays.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Button size="lg" className="rounded-full px-8" style={{background:"var(--primary-background)", color:"var(--primary-foreground)"}}>
+              <Button size="lg" className="rounded-full px-8" style={{ background: "var(--primary-background)", color: "var(--primary-foreground)" }}>
                 Shop the Sweater — 10,000 Tzs
               </Button>
               <Button
@@ -156,7 +156,7 @@ function Index() {
               size="lg"
               variant="secondary"
               className="mt-8 rounded-full px-8 "
-              style ={{background:"var(--primary-background)"}}
+              style={{ background: "var(--primary-background)" }}
             >
               Make It Yours
             </Button>
