@@ -1,5 +1,5 @@
-const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 const db = require('./_db');
 
 module.exports = async (req, res) => {
@@ -12,10 +12,10 @@ module.exports = async (req, res) => {
     const user = result.rows[0];
     if (!user) return res.status(401).json({ error: 'Invalid credentials' });
 
-    const match = await bcrypt.compare(password, user.password_hash);
-    if (!match) return res.status(401).json({ error: 'Invalid credentials' });
+    const ok = await bcrypt.compare(password, user.password_hash);
+    if (!ok) return res.status(401).json({ error: 'Invalid credentials' });
 
-    const token = jwt.sign({ sub: user.id, email: user.email }, process.env.JWT_SECRET || 'change-me', { expiresIn: '7d' });
+    const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET || 'dev', { expiresIn: '7d' });
     res.status(200).json({ token });
   } catch (err) {
     console.error(err);
